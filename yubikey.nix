@@ -10,4 +10,5 @@
         pkgs.libu2f-host
         pkgs.yubikey-personalization
     ];
+    hardware.u2f.enable = true;
 }

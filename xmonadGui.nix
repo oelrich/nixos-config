@@ -16,11 +16,11 @@
   services.xserver = {
     enable = true;
     layout = "se";
-#    xkbOptions = "eurosign:e";
+    desktopManager.xterm.enable = false;
+    displayManager.lightdm.enable=true;
     windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
-#      extraPackages = self: [];
     };
   };
 }

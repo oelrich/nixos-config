@@ -17,7 +17,7 @@
 
   # Select internationalisation properties.
   i18n = {
-    consoleFont = "lat9w-16";
+    consoleFont = "lat9w-24";
     consoleKeyMap = "sv-latin1";
     defaultLocale = "en_GB.utf-8";
   };
