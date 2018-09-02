@@ -1,0 +1,6 @@
+.vscode
+*~
+passwd.nix
+hardware-configuration*.nix
+configuration.nix
+result
