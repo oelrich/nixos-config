@@ -26,5 +26,6 @@
 
   boot.kernelModules = [ "kvm-intel" "fbcon" ];
 
+  services.xserver.dpi = 180;
   networking.hostName = "hex";
 }
