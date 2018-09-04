@@ -53,7 +53,9 @@
     permitRootLogin = "no";
 #    passwordAuthentication = false;
   };
-  
+  services.acpid.enable = true;
+  services.locate.enable = true;
+
 
  # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -67,6 +69,41 @@
       inconsolata
       ubuntu_font_family
       unifont
+    xorg.fontadobeutopia100dpi
+    xorg.fontadobeutopia75dpi
+    xorg.fontadobeutopiatype1
+    xorg.fontalias
+    xorg.fontarabicmisc
+    xorg.fontbh100dpi
+    xorg.fontbh75dpi
+    xorg.fontbhlucidatypewriter100dpi
+    xorg.fontbhlucidatypewriter75dpi
+    xorg.fontbhttf
+    xorg.fontbhtype1
+    xorg.fontbitstream100dpi
+    xorg.fontbitstream75dpi
+    xorg.fontbitstreamtype1
+    xorg.fontcronyxcyrillic
+    xorg.fontcursormisc
+    xorg.fontdaewoomisc
+    xorg.fontdecmisc
+    xorg.fontibmtype1
+    xorg.fontisasmisc
+    xorg.fontjismisc
+    xorg.fontmicromisc
+    xorg.fontmisccyrillic
+    xorg.fontmiscethiopic
+    xorg.fontmiscmeltho
+    xorg.fontmiscmisc
+    xorg.fontmuttmisc
+    xorg.fontschumachermisc
+    xorg.fontscreencyrillic
+    xorg.fontsonymisc
+    xorg.fontsproto
+    xorg.fontsunmisc
+    xorg.fontutil
+    xorg.fontwinitzkicyrillic
+    xorg.fontxfree86type1
     ];
   };
 
