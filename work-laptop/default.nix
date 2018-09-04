@@ -7,5 +7,6 @@
       ../wifi.nix
     ];
 
+  services.xserver.dpi = 180;
   networking.hostName = "hex";
 }

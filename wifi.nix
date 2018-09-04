@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 
 {
-  networking.wireless = {
-    enable = true;
-  };
+  imports =
+    [ ../wifi_ssid.nix ];
+  networking.wireless.enable = true;
 }
