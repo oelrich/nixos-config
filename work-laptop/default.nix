@@ -25,6 +25,13 @@
   '';
 
   boot.kernelModules = [ "kvm-intel" "fbcon" ];
+  
+  services.xserver.libinput  = { 
+    enable = true;
+    naturalScrolling = false;
+    middleEmulation = true;
+    tapping = true;
+  };
 
   services.xserver.dpi = 180;
   networking.hostName = "hex";
