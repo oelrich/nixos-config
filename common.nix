@@ -17,7 +17,7 @@
 
   # Select internationalisation properties.
   i18n = {
-    consoleFont = "lat9w-24";
+    consoleFont = "Lat2-Monospace-16";
     consoleKeyMap = "sv-latin1";
     defaultLocale = "en_GB.utf-8";
   };
@@ -67,43 +67,9 @@
     fonts = with pkgs; [
       corefonts
       inconsolata
+      dejavu_fonts
       ubuntu_font_family
       unifont
-    xorg.fontadobeutopia100dpi
-    xorg.fontadobeutopia75dpi
-    xorg.fontadobeutopiatype1
-    xorg.fontalias
-    xorg.fontarabicmisc
-    xorg.fontbh100dpi
-    xorg.fontbh75dpi
-    xorg.fontbhlucidatypewriter100dpi
-    xorg.fontbhlucidatypewriter75dpi
-    xorg.fontbhttf
-    xorg.fontbhtype1
-    xorg.fontbitstream100dpi
-    xorg.fontbitstream75dpi
-    xorg.fontbitstreamtype1
-    xorg.fontcronyxcyrillic
-    xorg.fontcursormisc
-    xorg.fontdaewoomisc
-    xorg.fontdecmisc
-    xorg.fontibmtype1
-    xorg.fontisasmisc
-    xorg.fontjismisc
-    xorg.fontmicromisc
-    xorg.fontmisccyrillic
-    xorg.fontmiscethiopic
-    xorg.fontmiscmeltho
-    xorg.fontmiscmisc
-    xorg.fontmuttmisc
-    xorg.fontschumachermisc
-    xorg.fontscreencyrillic
-    xorg.fontsonymisc
-    xorg.fontsproto
-    xorg.fontsunmisc
-    xorg.fontutil
-    xorg.fontwinitzkicyrillic
-    xorg.fontxfree86type1
     ];
   };
 

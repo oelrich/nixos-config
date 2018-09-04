@@ -35,4 +35,5 @@
 
   services.xserver.dpi = 180;
   networking.hostName = "hex";
+  boot.loader.grub.fontSize = 24;
 }
