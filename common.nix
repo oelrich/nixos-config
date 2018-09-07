@@ -77,8 +77,21 @@
     isNormalUser = true;
     home = "/home/oelrich";
     shell = pkgs.fish;
-    description = "Huge Nerd";
+    description = "Johan Oelrich";
     extraGroups = [ "oelrich" "wheel" ];
+  };
+
+  system.autoUpgrade.enable = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_watches" = 1048576;
+    "fs.inotify.max_user_instances" = 1024;
+    "fs.inotify.max_queued_events" = 32768;
   };
 
   # This value determines the NixOS release with which your system is to be
