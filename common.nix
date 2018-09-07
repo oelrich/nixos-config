@@ -67,6 +67,12 @@
     fonts = with pkgs; [
       corefonts
       inconsolata
+	emojione
+	noto-fonts
+	noto-fonts-emoji
+	fira
+	fira-code
+	fira-mono
       dejavu_fonts
       ubuntu_font_family
       unifont
@@ -80,6 +86,13 @@
     description = "Johan Oelrich";
     extraGroups = [ "oelrich" "wheel" ];
   };
+
+  system.activationScripts.dotfiles =
+      ''
+        rm -rf /home/oelrich/.xmonad
+        chown -R oelrich /etc/nixos/nixos-config/user
+        ln -s /etc/nixos/nixos-config/user/xmonad /home/oelrich/.xmonad
+      '';
 
   system.autoUpgrade.enable = true;
   nix.gc = {
