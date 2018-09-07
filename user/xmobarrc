@@ -1,4 +1,4 @@
 Config {
-	font = "xft:DejaVuMono:size=16"
+	font = "xft:DejaVuMono:size=12"
 
 }
