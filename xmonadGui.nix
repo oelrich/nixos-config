@@ -6,6 +6,7 @@
     [ xorg.xkill
       xorg.xeyes
       xorg.xclock
+	termite dmenu
       compton dzen2 ];
 	xmonadPack = with pkgs; [ haskellPackages.xmobar ];
 	graphicsPack = with pkgs; [ feh ffmpeg imagemagick ];
