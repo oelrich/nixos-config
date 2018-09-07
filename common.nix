@@ -90,8 +90,10 @@
   system.activationScripts.dotfiles =
       ''
         rm -rf /home/oelrich/.xmonad
+        rm -rf /home/oelrich/.xmobarrc
         chown -R oelrich /etc/nixos/nixos-config/user
         ln -s /etc/nixos/nixos-config/user/xmonad /home/oelrich/.xmonad
+        ln -s /etc/nixos/nixos-config/user/xmobarrc /home/oelrich/.xmobarrc
       '';
 
   system.autoUpgrade.enable = true;
