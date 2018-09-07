@@ -28,7 +28,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages =
-    let base = with pkgs; [ curl emacs fish tmux rxvt_unicode ];
+    let base = with pkgs; [ curl emacs fish tmux rxvt_unicode xterm ];
 		devPack = with pkgs; [ jq git opam ];
 		in base ++ devPack;
 
@@ -67,12 +67,12 @@
     fonts = with pkgs; [
       corefonts
       inconsolata
-	emojione
-	noto-fonts
-	noto-fonts-emoji
-	fira
-	fira-code
-	fira-mono
+      emojione
+      noto-fonts
+      noto-fonts-emoji
+      fira
+      fira-code
+      fira-mono
       dejavu_fonts
       ubuntu_font_family
       unifont

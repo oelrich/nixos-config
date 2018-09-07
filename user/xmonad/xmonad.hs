@@ -43,7 +43,7 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 altMask = mod1Mask
 myModMask = mod4Mask
 
-myTerminal = "urxvt"
+myTerminal = "xterm"
 
 myWorkSpaces = ["α", "β", "γ", "δ", "ε", "ζ", "η", "exchange", "comms"] 
 
