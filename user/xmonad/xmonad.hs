@@ -34,7 +34,7 @@ myXmobarPP = xmobarPP
                , ppLayout  = wrap "" "" . xmobarColor "DarkOrange" "" . wrap " [" "] "
                , ppTitle   = xmobarColor "#61ce3c" "" . shorten 150
                , ppSep     = ""
-               , ppWsSep   = " "
+               , ppWsSep   = "  "
                }
 
 -- Keybinding to toggle the gap for the bar.
@@ -43,8 +43,7 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 altMask = mod1Mask
 myModMask = mod4Mask
 
-myTerminal = "gnome-terminal"
--- "urxvt"
+myTerminal = "urxvt"
 
 myWorkSpaces = ["α", "β", "γ", "δ", "ε", "ζ", "η", "exchange", "comms"] 
 

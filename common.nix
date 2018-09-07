@@ -28,7 +28,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages =
-    let base = with pkgs; [ curl emacs fish tmux ];
+    let base = with pkgs; [ curl emacs fish tmux rxvt_unicode ];
 		devPack = with pkgs; [ jq git opam ];
 		in base ++ devPack;
 

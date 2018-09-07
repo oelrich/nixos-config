@@ -4,3 +4,9 @@ passwd.nix
 hardware-configuration*.nix
 configuration.nix
 result
+*.save
+*.o
+*.errors
+*.state
+*.hi
+xmonad-x86_64-linux
