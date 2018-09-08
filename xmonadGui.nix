@@ -28,7 +28,7 @@
       firefox
       thunderbird
       skype
-      telegram
+      tdesktop
     ];
     in guiPack ++ xmonadPack ++ graphicsPack ++ editorPack ++ netPack;
 
