@@ -15,10 +15,10 @@
       "usbhid"
     ];
     kernelParams = [
-      "video=1920x108"
+      "video=1920x1080"
     ];
     loader = {
-      grub.gfxmodeEfi = "1920x108";
+      grub.gfxmodeEfi = "1920x1080";
     };
   };
 }
