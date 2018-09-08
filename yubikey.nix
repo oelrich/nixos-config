@@ -2,7 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
-        opensc pcsctools libu2f-host yubikey-personalization pam pam_u2f pam_yubico
+        opensc pcsctools libu2f-host yubikey-personalization pam pam_u2f
         (openvpn.override { pkcs11Support = true;})
     ];
     services = {
@@ -14,5 +14,8 @@
     };
     hardware.u2f.enable = true;
 
-    security.pam.enableU2F = true;
+    security.pam = {
+        enableU2F = true;
+        services."oelrich".u2fAuth = true;
+    };
 }
