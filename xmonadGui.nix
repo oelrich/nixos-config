@@ -35,14 +35,19 @@
     driSupport = true;
   };
 
-  services.xserver = {
-    enable = true;
-    layout = "se";
-    desktopManager.xterm.enable = false;
-    displayManager.lightdm.enable=true;
-    windowManager.xmonad = {
+  services = {
+    compton = {
       enable = true;
-      enableContribAndExtras = true;
+    };
+    xserver = {
+      enable = true;
+      layout = "se";
+      desktopManager.xterm.enable = false;
+      displayManager.lightdm.enable=true;
+      windowManager.xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+      };
     };
   };
 }
