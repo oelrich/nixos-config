@@ -13,13 +13,12 @@
       "nls_iso8859-1"
       "usb_storage"
       "usbhid"
-      "hyperv_fb"
     ];
     kernelParams = [
       "video=1920x108"
     ];
     loader = {
-      grub.efxmodeEfi = "1920x108";
+      grub.gfxmodeEfi = "1920x108";
     };
   };
 }

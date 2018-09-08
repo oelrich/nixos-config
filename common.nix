@@ -1,36 +1,30 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./yubikey.nix
-      ./xmonadGui.nix
-    ];
+  imports = [
+    ../hardware-configuration.nix
+    ./yubikey.nix ];
 
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   nixpkgs.config.allowUnfree = true;
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Select internationalisation properties.
   i18n = {
     consoleFont = "Lat2-Monospace-16";
     consoleKeyMap = "sv-latin1";
     defaultLocale = "en_GB.utf-8";
   };
 
-  # Set your time zone.
   time.timeZone = "Europe/Stockholm";
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages =
-    let base = with pkgs; [ curl emacs fish tmux rxvt_unicode xterm ];
-		devPack = with pkgs; [ jq git opam ];
-		in base ++ devPack;
+  environment.systemPackages = with pkgs; [
+      fish
+      tmux
+      curl
+      jq
+      git
+    ];
 
   programs.fish.enable = true;
   programs.tmux.enable = true;
@@ -41,11 +35,11 @@
   # programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
-  networking = {
+#  networking = {
   #  networkmanager.enable = true;
 #    firewall.allowedTCPPorts = [];
 #    firewall.allowedUDPPorts = [];
-  };
+#  };
 
   services.openssh = {
     enable = true;
@@ -114,5 +108,4 @@
   # servers. You should change this only after NixOS release notes say you
   # should.
   system.stateVersion = "18.03"; # Did you read the comment?
-
 }

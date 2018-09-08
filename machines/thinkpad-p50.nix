@@ -3,9 +3,9 @@
 {
   imports =
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-      ../../hardware-configuration.nix
       ../common.nix
       ../wifi.nix
+      ../hdpi.nix
     ];
 
   boot.initrd.availableKernelModules = [ 
@@ -32,8 +32,4 @@
     middleEmulation = true;
     tapping = true;
   };
-
-  services.xserver.dpi = 180;
-  networking.hostName = "hex";
-  boot.loader.grub.fontSize = 24;
 }
