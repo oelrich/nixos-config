@@ -3,7 +3,7 @@
 {
   imports =
     [ ../guestHyperV.nix
-      ../xmonadGui.nix
+      ../../xmonadGui.nix
       ../../hdpi.nix ];
 
   networking.hostName = "snaxos";
