@@ -29,34 +29,15 @@
   programs.fish.enable = true;
   programs.tmux.enable = true;
   
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.bash.enableCompletion = true;
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
-
-#  networking = {
-  #  networkmanager.enable = true;
-#    firewall.allowedTCPPorts = [];
-#    firewall.allowedUDPPorts = [];
-#  };
-
   services.openssh = {
     enable = true;
     forwardX11 = true;
     permitRootLogin = "no";
-#    passwordAuthentication = false;
   };
+
   services.acpid.enable = true;
   services.locate.enable = true;
 
-
- # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
   fonts = {
     fonts = with pkgs; [
       corefonts
@@ -81,13 +62,16 @@
     extraGroups = [ "oelrich" "wheel" ];
   };
 
+  # Horrendous hack ...
   system.activationScripts.dotfiles =
       ''
         rm -rf /home/oelrich/.xmonad
         rm -rf /home/oelrich/.xmobarrc
+        rm -rf /home/oelrich/.tmux.conf
         chown -R oelrich /etc/nixos/nixos-config/user
         ln -s /etc/nixos/nixos-config/user/xmonad /home/oelrich/.xmonad
         ln -s /etc/nixos/nixos-config/user/xmobarrc /home/oelrich/.xmobarrc
+        ln -s /etc/nixos/nixos-config/user/tmux.conf /home/oelrich/.tmux.conf
       '';
 
   system.autoUpgrade.enable = true;
