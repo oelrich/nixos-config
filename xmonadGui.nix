@@ -27,7 +27,7 @@
 	  netPack = with pkgs; [
       firefox
       thunderbird
-      skype
+      skypeforlinux
       tdesktop
     ];
     in guiPack ++ xmonadPack ++ graphicsPack ++ editorPack ++ netPack;
