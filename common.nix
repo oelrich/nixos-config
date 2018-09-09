@@ -24,6 +24,7 @@
       curl
       jq
       git
+      irssi
     ];
 
   programs.fish.enable = true;

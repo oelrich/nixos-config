@@ -26,8 +26,11 @@
     ];
 	  netPack = with pkgs; [
       firefox
+      davmail
       thunderbird
-      tdesktop
+      pidgin
+      pidgin-skypeweb
+      telegram-purple
     ];
     in guiPack ++ xmonadPack ++ graphicsPack ++ editorPack ++ netPack;
 
