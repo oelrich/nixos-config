@@ -4,6 +4,7 @@
   imports =
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
       ../common.nix
+      ../xmonadGui.nix
       ../wifi.nix
       ../hdpi.nix
     ];
