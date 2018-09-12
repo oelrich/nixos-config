@@ -3,7 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
       jetbrains.idea-ultimate
-      openjdk10
+      zulu
+      visualvm
       ];
 }
       
