@@ -18,6 +18,8 @@
 
   time.timeZone = "Europe/Stockholm";
 
+  network.timeServers = [ "ntp.uu.se" ];
+
   environment.systemPackages = with pkgs; [
       fish
       tmux
