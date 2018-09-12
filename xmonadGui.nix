@@ -11,6 +11,7 @@
       compton
       slock
       scrot
+      wmname
       dzen2
     ];
 	  xmonadPack = with pkgs; [
