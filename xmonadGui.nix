@@ -23,6 +23,7 @@
     ];
     editorPack = with pkgs; [
       vscode
+      idea-ultimate
     ];
 	  netPack = with pkgs; [
       firefox
